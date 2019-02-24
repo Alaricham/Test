@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import NavbarX from './components/NavbarX'
-import Playlist from './components/Playlist2'
-import Player from './components/Player';
-import Comments from './components/Comments'
-import './App.css';
+import NavbarX from './NavbarX'
+import Playlist from './Playlist2'
+import Player from './Player';
+import Comments from './Comments'
+import '../css/App.css';
 import { Row, Col } from 'react-bootstrap';
 import { BrowserRouter } from 'react-router-dom'
 
