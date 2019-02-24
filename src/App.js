@@ -1,25 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import NavbarX from './components/NavbarX'
+import Playlist from './components/Playlist2'
+import Player from './components/Player';
+import Comments from './components/Comments'
 import './App.css';
+import { Row, Col } from 'react-bootstrap';
+import { BrowserRouter } from 'react-router-dom'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <NavbarX />
+        <Row>
+          <Col md="9" style={{ paddingLeft: '100px', marginTop: '100px' }}>
+            <BrowserRouter>
+              <Player {...this.props} />
+            </BrowserRouter>
+            <Comments />
+          </Col>
+          <Col md="3" style={{ marginTop: '100px' }} >
+            <Playlist />
+          </Col>
+        </Row>
       </div>
     );
   }
