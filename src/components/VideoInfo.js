@@ -19,12 +19,10 @@ class VideoInfo extends React.Component {
                             style={{ borderRadius: '100%', width: '50px', height: '50px' }}
                         />
                         <Media.Body>
-                            <div>
-                                <p><strong>UserX</strong></p>
-                                <p style={{ marginBottom: '20px', fontSize: '12px' }}> Publish on {new Date().toDateString()}</p>
-                                <p>Really really good video</p>
-                                <p style={{ marginTop: '20px' }}>Show More</p>
-                            </div>
+                            <p><strong>UserX</strong></p>
+                            <p style={{ marginBottom: '20px', fontSize: '12px' }}> Publish on {new Date().toDateString()}</p>
+                            <p>Really really good video</p>
+                            <p style={{ marginTop: '20px' }}>Show More</p>
                         </Media.Body>
                         <Button style={{ marginRight: '20px' }} variant="danger">Subscribe</Button>
                     </Media>

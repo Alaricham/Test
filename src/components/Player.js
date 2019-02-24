@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import UserPost from './userPost'
 import logo from "../img/logo.png";
 import { withRouter } from 'react-router-dom'
 import VideoInfo from './VideoInfo';
@@ -7,9 +6,6 @@ import VideoInfo from './VideoInfo';
 class Player extends Component {
     render() {
         let history = this.props.history.location.pathname
-        let style = {
-            ['border-radius']: '5%'
-        }
         return (
             <React.Fragment>
                 <div>

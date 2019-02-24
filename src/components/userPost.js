@@ -16,8 +16,8 @@ class UserPost extends React.Component {
                     <Media.Body>
                         <p style={{ paddingBottom: '10px' }}><strong>{this.props.info.name}</strong></p>
                         <p>{this.props.info.comment}</p>
-                        <i style={{ marginRight: '20px', marginTop: '20px' }} class="fas fa-thumbs-up"></i>
-                        <i style={{ position: 'relative', top: '3px', marginRight: '20px' }} class="fas fa-thumbs-down"></i>
+                        <i style={{ marginRight: '20px', marginTop: '20px' }} className="fas fa-thumbs-up"></i>
+                        <i style={{ position: 'relative', top: '3px', marginRight: '20px' }} className="fas fa-thumbs-down"></i>
                         <p style={{ display: 'inline-block' }}>Reply</p>
                     </Media.Body>
                 </Media>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Media } from 'react-bootstrap'
 import UserPost from './userPost';
 import logo from "../img/logo.png";
 

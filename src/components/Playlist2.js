@@ -10,7 +10,7 @@ class Playlist extends React.Component {
             list.push({ url: logo, name: "Item" + (i + 1), views: Math.trunc(Math.random() * 10000000) + ' views', description: "Music" })
         }
         return (<div>
-            {list.map(item => <Item info={item} />)}
+            {list.map((item, num) => <Item key={num} info={item} />)}
         </div>)
     }
 }

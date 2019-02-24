@@ -4,6 +4,7 @@ import { Media } from 'react-bootstrap'
 class Item extends React.Component {
 
     render() {
+        let { views, description, url } = this.props.info;
 
         return (<div className="separator">
             <Media>
@@ -11,13 +12,13 @@ class Item extends React.Component {
                     width={100}
                     height={80}
                     className="mr-3"
-                    src={this.props.info.url}
+                    src={url}
                     alt="Generic placeholder"
                 />
                 <Media.Body>
                     <p><strong>{this.props.info.name}</strong></p>
-                    <p>{this.props.info.views}</p>
-                    <p>{this.props.info.description}</p>
+                    <p>{views}</p>
+                    <p>{description}</p>
                 </Media.Body>
             </Media>
         </div>)
