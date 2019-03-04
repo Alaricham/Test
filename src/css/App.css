@@ -9,3 +9,30 @@ p {
 .separator {
   margin-bottom: 20px;
 }
+
+.ui.menu:after {
+  content: normal;
+}
+
+.bubble-image {
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+}
+
+#img {
+  background-size: cover;
+  width: 280px;
+  height: 200px;
+}
+
+#searchbar {
+  border-radius: 7px;
+  width: 400px;
+  height: 30px;
+}
+
+#searchbtn {
+height: 30px;
+padding: 0 20px;
+}

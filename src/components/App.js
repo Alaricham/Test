@@ -1,29 +1,31 @@
 import React, { Component } from 'react';
 import NavbarX from './NavbarX'
-import Playlist from './Playlist2'
-import Player from './Player';
-import Comments from './Comments'
+import Video from './Video'
+import Search from './Search'
 import '../css/App.css';
-import { Row, Col } from 'react-bootstrap';
-import { BrowserRouter } from 'react-router-dom'
+import { Grid } from 'semantic-ui-react'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 class App extends Component {
+  state = { search: '', data: [] }
+
+  inputSearch = event => {
+    this.setState({ search: event.value })
+  }
   render() {
-    return (
+    return (<BrowserRouter>
       <div className="App">
-        <NavbarX />
-        <Row>
-          <Col md="9" style={{ paddingLeft: '100px', marginTop: '100px' }}>
-            <BrowserRouter>
-              <Player {...this.props} />
-            </BrowserRouter>
-            <Comments />
-          </Col>
-          <Col md="3" style={{ marginTop: '100px' }} >
-            <Playlist />
-          </Col>
-        </Row>
-      </div>
+        <NavbarX inputSearch={this.inputSearch} />
+        <Grid  >
+          <Grid.Row columns={2}>
+            <Switch>
+              <Route path="/" exact render={(props) => <Search search={this.state.search} />} />
+              <Route path="/:id" component={Video} />
+            </Switch>
+          </Grid.Row>
+        </Grid>
+      </div >
+    </BrowserRouter>
     );
   }
 }

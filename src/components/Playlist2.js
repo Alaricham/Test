@@ -1,16 +1,20 @@
 import React from 'react';
-import Item from './Item';
-import logo from "../img/logo.png";
+import logo from "../img/placeholder.jpg";
+import ItemVideo from './ItemVideo'
 
 class Playlist extends React.Component {
 
     render() {
         let list = [];
+        let settings = {
+            image: logo,
+            extra: Math.trunc(Math.random() * 10000000) + ' views',
+        }
         for (let i = 0; i < 12; i++) {
-            list.push({ url: logo, name: "Item" + (i + 1), views: Math.trunc(Math.random() * 10000000) + ' views', description: "Music" })
+            list.push(<ItemVideo key={i} info={{ ...settings, header: 'Item ' + (i + 1), childKey: i }} />)
         }
         return (<div>
-            {list.map((item, num) => <Item key={num} info={item} />)}
+            {list}
         </div>)
     }
 }

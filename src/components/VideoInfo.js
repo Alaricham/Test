@@ -1,5 +1,5 @@
 import React from 'react';
-import { Media, Button } from 'react-bootstrap'
+import { Item, Button } from 'semantic-ui-react'
 
 class VideoInfo extends React.Component {
     render() {
@@ -10,22 +10,22 @@ class VideoInfo extends React.Component {
                     <h3>Video Test</h3>
                     <p>{Math.trunc(Math.random() * 10000000)} views</p>
                 </div>
-                <div style={{ padding: '30px 0', borderTop: 'solid 1px lightgrey', borderBottom: 'solid 1px lightgrey' }}>
-                    <Media>
-                        <img
-                            className="mr-3"
+                <div style={{ padding: '30px 0', borderTop: 'solid 1px lightgrey', borderBottom: 'solid 1px lightgrey', position: 'relative' }}>
+                    < Item style={{ display: 'flex', flexDirection: 'rows' }} >
+                        <img className="bubble-image"
                             src={this.props.logo}
-                            alt="Generic placeholder"
-                            style={{ borderRadius: '100%', width: '50px', height: '50px' }}
-                        />
-                        <Media.Body>
-                            <p><strong>UserX</strong></p>
+                            style={{ marginRight: '20px' }}
+                        ></img>
+                        <Item.Content>
+                            <Item.Header ><strong>UserX</strong></Item.Header>
                             <p style={{ marginBottom: '20px', fontSize: '12px' }}> Publish on {new Date().toDateString()}</p>
-                            <p>Really really good video</p>
-                            <p style={{ marginTop: '20px' }}>Show More</p>
-                        </Media.Body>
-                        <Button style={{ marginRight: '20px' }} variant="danger">Subscribe</Button>
-                    </Media>
+                            <Item.Description>
+                                <p>Really really good video</p>
+                                <p style={{ marginTop: '20px' }}>Show More</p>
+                            </Item.Description>
+                            <Button style={{ marginRight: '20px', position: 'absolute', top: '30px', right: '30px', backgroundColor: '#FF4444', color: 'white'}}>Subscribe</Button>
+                        </Item.Content>
+                    </Item >
                 </div>
             </React.Fragment >
         )
