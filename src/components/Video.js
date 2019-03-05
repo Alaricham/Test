@@ -12,7 +12,7 @@ class Video extends Component {
                 <Comments />
             </Grid.Column>
             <Grid.Column width={5} style={{ marginTop: '80px' }}  >
-                <Playlist />
+                <Playlist  {...this.props} />
             </Grid.Column>
         </React.Fragment>
         );

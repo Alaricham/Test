@@ -10,7 +10,10 @@ class Search extends Component {
                 <SideMenu />
             </Grid.Column>
             <Grid.Column width={12} style={{ marginTop: '70px' }} >
-                <SearchResultsBox search={this.props.search} />
+                <SearchResultsBox
+                    search={this.props.search}
+                    passCurrent={this.props.passCurrent}
+                />
             </Grid.Column>
         </React.Fragment>
         );

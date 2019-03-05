@@ -7,6 +7,8 @@ class SearchResultsBox extends Component {
     state = { data: [] }
 
     linkTo = event => {
+        console.log(event.target.parentNode.parentNode.parentNode.getAttribute('data-id'))
+        this.props.passCurrent(this.state.data[event.target.parentNode.parentNode.parentNode.getAttribute('data-id')], this.state.data)
         this.props.history.push('/' + event.target.parentNode.parentNode.parentNode.id)
     }
 
@@ -31,7 +33,7 @@ class SearchResultsBox extends Component {
                 image: list[i].snippet.thumbnails.medium.url,
                 extra: list[i].snippet.description,
             }
-            listReady.push(<div id={list[i].id.videoId} key={i}><ItemVideo info={{ ...settings }} /></div>)
+            listReady.push(<div id={list[i].id.videoId} data-id={i} key={i}><ItemVideo info={{ ...settings }} /></div>)
         }
         return (<div onClick={this.linkTo}>
             {listReady}
