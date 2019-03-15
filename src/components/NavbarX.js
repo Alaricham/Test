@@ -19,7 +19,6 @@ class NavbarX extends React.Component {
         }
     }
 
-
     render() {
         return (<Menu className='borderless' style={{ justifyContent: 'space-between', flexDirection: 'row', position: 'fixed', zIndex: '1', width: '100%' }}>
             <div style={{ flexDirection: 'row', display: 'flex' }}>
